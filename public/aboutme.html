@@ -4,55 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
+  <link rel="stylesheet" href="../assets/CSS/index.css">
 </head>
 <body>
-    <img src="../images/interstellar-neu-dpa.jpeg" alt="Profile Picture" width="150">
-    <h1>Armin</h1>
-    <p>Software Developer</p>
+  <a class="back-link" href="../index.html">← Zurück</a>
 
-    <h2>Education</h2>
-    <p>Bachelor in Computer Science</p>
+  <main class="page-container about-page">
+    <section class="profile">
+      <img class="avatar" src="../assets/images/bild.png" alt="Profilbild">
+      <div class="bio">
+        <h1>Armin</h1>
+        <p class="tagline">Software Developer — CI/CD & Cloud Enthusiast</p>
+        <p class="contact">E-Mail: <a href="mailto:arminkamitz13@proton.me">arminkamitz13@proton.me</a></p>
+      </div>
+    </section>
 
-    <h2>Work Experience</h2>
-    <p>CI/CD in PSI AG</p>
+    <section class="card">
+      <h2>About</h2>
+      <p>Ich arbeite an Software- und CI/CD-Lösungen, habe Erfahrung mit Backend (C++, Java, Python), Frontend (HTML/CSS/JS), Containerization und Cloud (AWS, Azure).</p>
+    </section>
 
-    <h2>Experience</h2>
-    <ul>
-        <li>knowledge about jenkins</li>
-        <li>knowledge about jira</li>
-        <li> backend like c++,java and python</li>
-        <li>frontend like html css und javascript</li>
-        <li>database like mysql</li>
-        <li>cloud computing with aws und azure</li>
-        <li>version control with git</li>
-        <li>containerization with docker</li>
-        <li>orchestration with kubernetes</li>
-        <li>agile methodologies like scrum</li>
-        <li>problem solving skills</li>
-        <li>teamwork and communication skills</li>
-        <li>continuous learning and adaptation</li>
-    </ul>
+    <section class="card">
+      <h2>Experience</h2>
+      
+      <ul>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>C++</li>
-        <li>SQL</li>
-        <li>Git</li>
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>AWS</li>
-        <li>Azure</li>
-        <li>Jenkins</li>
-        <li>Jira</li>
-        <li>Scrum</li>
-    </ul>    
-</body>
-  <footer>
-    <p><a href="hobby.html">hobby(tba)</a> <a href="aboutme.html">about me</a>  </a> </a></p>
+        <li><p>Knowledge about Jenkins & CI pipelines</p></li>
+        <li><p>Experience with Docker & Kubernetes</p></li>
+        <li><p>Version control with Git</p></li>
+        <li><p>Worked on projects involving AWS and Azure</p></li>
+      </ul>
+      
+    </section>
+
+    <section class="card">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        <span>Python</span><span>Java</span><span>C++</span>
+        <span>SQL</span><span>Git</span><span>Docker</span>
+        <span>Kubernetes</span><span>AWS</span><span>Azure</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p><a href="../index.html">Home</a> • <a href="artwork.html">Artwork</a></p>
   </footer>
+</body>
 </html>
