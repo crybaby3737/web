@@ -23,7 +23,7 @@ h1 {
 /* site title top-centered */
 .site-title {
     position: absolute;
-    top: 18px;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -134,14 +134,16 @@ img, picture, video {
     display: block;
 }
 
-.link-box a {
+.link-box a{
     min-height: 44px; 
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 14px;
     border-radius: 8px;
 }
+p { font: bold 20px Arial, sans-serif;
+    }
 
 
 .art-card img { height: auto; aspect-ratio: 16/9; }
