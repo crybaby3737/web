@@ -3,17 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <script type="text/javarscript" src="./assets/js/index.js"></script>
+    <title>Armin Kamitz | Software Developer & DevOps</title>
+    <meta name="description" content="Freelance Software Developer specializing in CI/CD, Cloud Solutions, and Full-Stack Development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <h1 class="site-title">crybaby3737</h1>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AK</a>
+            <div class="nav-links">
+                <a href="#about" data-en="About" data-de="Über mich">About</a>
+                <a href="#services" data-en="Services" data-de="Leistungen">Services</a>
+                <a href="#projects" data-en="Projects" data-de="Projekte">Projects</a>
+                <a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a>
+                <button class="lang-toggle" onclick="toggleLanguage()">DE</button>
+            </div>
+            <button class="nav-mobile-toggle" onclick="toggleMobileNav()">☰</button>
+        </div>
+    </nav>
 
-    <div class="link-box">
-        <p><a href="./public/projects.html">projects</a></p>
-        <p><a href="./public/aboutme.html">about me</a></p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting" data-en="Hi, I'm" data-de="Hi, ich bin">Hi, I'm</p>
+            <h1 class="hero-name">Armin Kamitz</h1>
+            <p class="hero-title" data-en="Software Developer & DevOps Engineer" data-de="Software Entwickler & DevOps Engineer">Software Developer & DevOps Engineer</p>
+            <p class="hero-description" data-en="I build robust software solutions, streamline CI/CD pipelines, and architect cloud infrastructure. Let's bring your ideas to life." data-de="Ich entwickle robuste Software-Lösungen, optimiere CI/CD-Pipelines und designe Cloud-Infrastruktur. Lass uns deine Ideen umsetzen.">I build robust software solutions, streamline CI/CD pipelines, and architect cloud infrastructure. Let's bring your ideas to life.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary" data-en="Get in Touch" data-de="Kontakt aufnehmen">Get in Touch</a>
+                <a href="#projects" class="btn btn-secondary" data-en="View Projects" data-de="Projekte ansehen">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-en="About Me" data-de="Über mich">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./assets/images/bild.png" alt="Armin Kamitz">
+                </div>
+                <div class="about-text">
+                    <p data-en="I'm a passionate software developer with expertise in backend development, DevOps practices, and cloud technologies. I help businesses automate their workflows, build scalable applications, and deploy with confidence." data-de="Ich bin ein leidenschaftlicher Software-Entwickler mit Expertise in Backend-Entwicklung, DevOps-Praktiken und Cloud-Technologien. Ich helfe Unternehmen, ihre Workflows zu automatisieren, skalierbare Anwendungen zu bauen und sicher zu deployen.">I'm a passionate software developer with expertise in backend development, DevOps practices, and cloud technologies. I help businesses automate their workflows, build scalable applications, and deploy with confidence.</p>
+                    <p data-en="With experience in C++, Java, Python, and modern web technologies, I deliver solutions that are both elegant and efficient." data-de="Mit Erfahrung in C++, Java, Python und modernen Web-Technologien liefere ich Lösungen, die sowohl elegant als auch effizient sind.">With experience in C++, Java, Python, and modern web technologies, I deliver solutions that are both elegant and efficient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title" data-en="What I Offer" data-de="Was ich anbiete">What I Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3 data-en="Backend Development" data-de="Backend-Entwicklung">Backend Development</h3>
+                    <p data-en="Scalable APIs and server-side applications using Java, Python, C++, and modern frameworks." data-de="Skalierbare APIs und Server-Anwendungen mit Java, Python, C++ und modernen Frameworks.">Scalable APIs and server-side applications using Java, Python, C++, and modern frameworks.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 data-en="CI/CD & DevOps" data-de="CI/CD & DevOps">CI/CD & DevOps</h3>
+                    <p data-en="Automated pipelines with Jenkins, GitHub Actions, Docker, and Kubernetes for seamless deployments." data-de="Automatisierte Pipelines mit Jenkins, GitHub Actions, Docker und Kubernetes für reibungslose Deployments.">Automated pipelines with Jenkins, GitHub Actions, Docker, and Kubernetes for seamless deployments.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3 data-en="Cloud Solutions" data-de="Cloud-Lösungen">Cloud Solutions</h3>
+                    <p data-en="Infrastructure design and deployment on AWS and Azure. Cost-effective, scalable, and secure." data-de="Infrastruktur-Design und Deployment auf AWS und Azure. Kosteneffizient, skalierbar und sicher.">Infrastructure design and deployment on AWS and Azure. Cost-effective, scalable, and secure.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 data-en="Web Development" data-de="Web-Entwicklung">Web Development</h3>
+                    <p data-en="Clean, responsive websites and web applications with HTML, CSS, JavaScript, and modern tools." data-de="Cleane, responsive Websites und Web-Anwendungen mit HTML, CSS, JavaScript und modernen Tools.">Clean, responsive websites and web applications with HTML, CSS, JavaScript, and modern tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-en="Skills & Technologies" data-de="Skills & Technologien">Skills & Technologies</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h4 data-en="Languages" data-de="Sprachen">Languages</h4>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>C++</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 data-en="DevOps & Cloud" data-de="DevOps & Cloud">DevOps & Cloud</h4>
+                    <div class="skill-tags">
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>Jenkins</span>
+                        <span>AWS</span>
+                        <span>Azure</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 data-en="Web & Frontend" data-de="Web & Frontend">Web & Frontend</h4>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title" data-en="Featured Projects" data-de="Ausgewählte Projekte">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/images/Java.png" alt="Java Programming Course">
+                    </div>
+                    <div class="project-content">
+                        <h3>Java Programming</h3>
+                        <p data-en="Comprehensive Java projects covering OOP, data structures, and algorithms." data-de="Umfassende Java-Projekte zu OOP, Datenstrukturen und Algorithmen.">Comprehensive Java projects covering OOP, data structures, and algorithms.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>OOP</span>
+                        </div>
+                        <a href="https://github.com/crybaby3737/Pk1-Repo/" target="_blank" rel="noopener noreferrer" class="project-link" data-en="View on GitHub →" data-de="Auf GitHub ansehen →">View on GitHub →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/images/Spielearcade.png" alt="Game Arcade">
+                    </div>
+                    <div class="project-content">
+                        <h3>Game Arcade</h3>
+                        <p data-en="Collection of classic arcade games built with Java. Interactive and fun!" data-de="Sammlung klassischer Arcade-Spiele in Java. Interaktiv und unterhaltsam!">Collection of classic arcade games built with Java. Interactive and fun!</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Game Dev</span>
+                        </div>
+                        <a href="https://github.com/crybaby3737/imt" target="_blank" rel="noopener noreferrer" class="project-link" data-en="View on GitHub →" data-de="Auf GitHub ansehen →">View on GitHub →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/images/Gamedev.png" alt="Game Development">
+                    </div>
+                    <div class="project-content">
+                        <h3>Game Development</h3>
+                        <p data-en="Exploring game development with modern engines and frameworks." data-de="Game-Entwicklung mit modernen Engines und Frameworks.">Exploring game development with modern engines and frameworks.</p>
+                        <div class="project-tags">
+                            <span>Game Dev</span>
+                            <span>In Progress</span>
+                        </div>
+                        <a href="https://github.com/crybaby3737/GameDev" target="_blank" rel="noopener noreferrer" class="project-link" data-en="View on GitHub →" data-de="Auf GitHub ansehen →">View on GitHub →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/images/Web-Technologies.png" alt="Web Technologies">
+                    </div>
+                    <div class="project-content">
+                        <h3>Web Technologies</h3>
+                        <p data-en="Modern web development projects using HTML, CSS, JS and more." data-de="Moderne Web-Entwicklungsprojekte mit HTML, CSS, JS und mehr.">Modern web development projects using HTML, CSS, JS and more.</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/crybaby3737/Web-Technologies" target="_blank" rel="noopener noreferrer" class="project-link" data-en="View on GitHub →" data-de="Auf GitHub ansehen →">View on GitHub →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Let's Work Together" data-de="Lass uns zusammenarbeiten">Let's Work Together</h2>
+            <p class="contact-intro" data-en="Have a project in mind? I'd love to hear about it. Let's discuss how I can help you achieve your goals." data-de="Hast du ein Projekt im Kopf? Ich würde gerne davon hören. Lass uns besprechen, wie ich dir helfen kann.">Have a project in mind? I'd love to hear about it. Let's discuss how I can help you achieve your goals.</p>
+            <div class="contact-cta">
+                <a href="mailto:arminkamitz13@proton.me" class="btn btn-primary btn-large" data-en="Send me an Email" data-de="Schreib mir eine E-Mail">Send me an Email</a>
+            </div>
+            <div class="contact-links">
+                <a href="https://github.com/crybaby3737" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span class="contact-link-icon">GitHub</span>
+                </a>
+                <a href="mailto:arminkamitz13@proton.me" class="contact-link">
+                    <span class="contact-link-icon">Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Armin Kamitz. <span data-en="All rights reserved." data-de="Alle Rechte vorbehalten.">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

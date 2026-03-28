@@ -1,24 +1,45 @@
-// var names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
-// function whoPaying(names){
-// var numberOfPeople = names.length;
-// var randompersonPosition = Math.floor(Math.random() * numberOfPeople);
-// var randomPerson = names[randompersonPosition];
+// Matrix Rain Effect
+(function() {
+    const canvas = document.createElement('canvas');
+    canvas.id = 'matrix-bg';
+    document.body.prepend(canvas);
 
-// return randomPerson + "is going to buy lunch today!";}
+    const ctx = canvas.getContext('2d');
 
-// console.log("He ist paying "+whoPaying(names)+ " with key "+randompersonPosition);
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
 
+    const digits = '1234567890';
+    const fontSize = 18;
+    let columns = Math.floor(canvas.width / fontSize);
+    let drops = Array(columns).fill(1);
 
-// function beer(){
-//    var counter = 99;
-//    while (counter>0){
-//     console.log(counter+" bottle of beer on the wall, "+counter+" bottles of beer.");
-//     counter--;
-//     console.log("Take 1 down, pass it arround," +counter+ "bottles of beer on the wall.") ;
-//     if (counter ===0){
-//         console.log("No bottles left...")
-//     }
-//    }
+    window.addEventListener('resize', () => {
+        columns = Math.floor(canvas.width / fontSize);
+        drops = Array(columns).fill(1);
+    });
 
-// }
-// beer();
+    function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = '#2e5c3a';
+        ctx.font = fontSize + 'px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+            const char = digits[Math.floor(Math.random() * digits.length)];
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+
+    setInterval(draw, 35);
+})();
